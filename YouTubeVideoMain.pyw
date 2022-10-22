@@ -1,4 +1,4 @@
-import sys  # sys нужен для передачи argv в QApplication
+import sys  
 import pytube
 from PyQt5 import QtWidgets
 from PyQt5 import QtGui
@@ -48,7 +48,6 @@ class ExampleAppWin2(QtWidgets.QMainWindow, UIYouTubeVideo.Ui_MainWindow2):
 
 class ExampleAppWin1(QtWidgets.QMainWindow, UIYouTubeVideo.Ui_MainWindow):
     def __init__(self):
-        # Это здесь нужно для доступа к переменным, методам
         super().__init__()
 
         self.dataStream = []
@@ -59,7 +58,7 @@ class ExampleAppWin1(QtWidgets.QMainWindow, UIYouTubeVideo.Ui_MainWindow):
         self.stream = None
         self.yt = None
 
-        self.setupUi(self)  # Это нужно для инициализации нашего дизайна
+        self.setupUi(self)  
         self.setWindowIcon(QtGui.QIcon('Data/77834-play-icons-button-youtube-computer-logo.png'))
         self.msg_box_name = QMessageBox()
         self.pushButton_3.clicked.connect(self.selectDirectory)
